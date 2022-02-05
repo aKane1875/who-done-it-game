@@ -1,10 +1,16 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import WelcomePage from "./components/WelcomePage";
 
 function App() {
   return (
-    <div className="App">
-      <h1>WHO DONE IT GAME</h1>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
